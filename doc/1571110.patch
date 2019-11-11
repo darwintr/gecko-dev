@@ -1,0 +1,20 @@
+# HG changeset patch
+# User darwin <darwin.truong@mail.utoronto.ca>
+# Date 1573511272 18000
+#      Mon Nov 11 17:27:52 2019 -0500
+# Node ID 935b82638bfceb615f4cc2e6e7a35350bdc8d7c7
+# Parent  6a36994d2e14869283ea43331eeeaedac5be9e7c
+Bug 1571110 Change chrome_settings_overrides.search_provider.favicon_url from "url" to "relativeUrl".
+
+diff --git a/browser/components/extensions/schemas/chrome_settings_overrides.json b/browser/components/extensions/schemas/chrome_settings_overrides.json
+--- a/browser/components/extensions/schemas/chrome_settings_overrides.json
++++ b/browser/components/extensions/schemas/chrome_settings_overrides.json
+@@ -39,7 +39,7 @@
+                   "favicon_url": {
+                     "type": "string",
+                     "optional": true,
+-                    "format": "url",
++                    "format": "relativeUrl",
+                     "preprocess": "localize"
+                   },
+                   "suggest_url": {
